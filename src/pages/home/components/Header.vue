@@ -47,8 +47,5 @@ export default {
         .plus
           color #ffffff
           font-size .5rem !important
-
-        
-         
 </style>
 
