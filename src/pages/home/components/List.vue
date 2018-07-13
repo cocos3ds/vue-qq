@@ -15,6 +15,9 @@
                 2018-07-01
               </div>
             </div>
+            <div class="down">
+              打开支付宝首页搜索"7401104",即可领...
+            </div>
           </div>
         </div>
       </li>
@@ -41,11 +44,17 @@ export default {
       flex 1
       margin-left .2rem
       .up
+        display flex
         .name
           color #000
           font-size .4rem
+          flex 1
         .date
           float right
+          line-height .44rem
+      .down
+        color #828282
+        line-height .5rem
   .select
     background #edfaff
   

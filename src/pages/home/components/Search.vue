@@ -18,6 +18,7 @@ export default {
     font-size .3rem
     color #aaaab3
     margin .2rem .3rem
+    border-radius .1rem
     .magnifier
       font-size .3rem
       color #aaaab3
