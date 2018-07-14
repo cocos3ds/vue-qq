@@ -25,7 +25,7 @@ export default {
       display flex
       overflow hidden
       background #3ea4fe
-      padding .2rem .3rem
+      padding .1rem .3rem
       color #fff
       .header-left
         height 1rem
@@ -37,12 +37,13 @@ export default {
       .header-middle
         flex 1
         text-align center
-        line-height $headerHeight
+        line-height 1rem
+        height 1rem
         font-size .4rem
       .header-right
         width 1rem
-        height $headerHeight
-        line-height $headerHeight
+        height 1rem
+        line-height 1rem
         text-align center
         .plus
           color #ffffff

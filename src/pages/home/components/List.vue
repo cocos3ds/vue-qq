@@ -1,7 +1,7 @@
 <template>
   <div class="contacts-list">
     <ul>
-      <li>
+      <router-link to="/chat" tag="li">
         <div class="item border-bottom select">
           <div class="item-left">
             <img class="item-avatar" src="/img/avatar.jpg" >
@@ -20,7 +20,7 @@
             </div>
           </div>
         </div>
-      </li>
+      </router-link>
     </ul>
   </div>
 </template>
@@ -32,7 +32,7 @@ export default {
 </script>
 <style lang="stylus" scoped>
   .item
-    height 1.2rem
+    height 1.5rem
     overflow hidden
     padding .2rem .3rem
     display flex
@@ -54,7 +54,7 @@ export default {
           line-height .44rem
       .down
         color #828282
-        line-height .5rem
+        line-height .7rem
   .select
     background #edfaff
   
