@@ -1,8 +1,8 @@
 <template>
   <div class="chat">
     <chat-header/>
-    <message-list/>
-    <send-box/>
+    <message-list :newMessage="newMessage"/>
+    <send-box @SendMessage="handleSendMessage"/>
   </div>
 </template>
 
@@ -13,10 +13,20 @@ import MessageList from './components/MessageList.vue'
 
 export default {
   name: 'Chat',
+  data: function () {
+    return {
+      newMessage:{}
+    }
+  },
   components: {
     ChatHeader,
     SendBox,
     MessageList
+  },
+  methods: {
+    handleSendMessage: function (message) {
+      this.newMessage = message
+    }
   }
 }
 </script>
@@ -26,6 +36,7 @@ export default {
     height 100%
     display flex
     flex-direction column
+    background #f0f2f8
 </style>
 
 

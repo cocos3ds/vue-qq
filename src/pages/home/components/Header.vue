@@ -1,7 +1,7 @@
 <template>
     <div class="header">
         <div class="header-left">
-            <img src="/img/avatar.jpg" alt="" class="avatar">
+            <img src="/img/avatar.jpg" class="avatar">
         </div>
         <div class="header-middle">
             消息
