@@ -12,7 +12,9 @@
           {{message.text}}
           </span>
         </div>
-        <div class="message" v-else></div>
+        <div class="message" v-else>
+          
+        </div>
       </li>
     </ul>
   </div>
