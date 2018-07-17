@@ -8,9 +8,10 @@
           <div class="avatar">
             <img src="/img/avatar.jpg" class="avatar">
           </div>
-          <span class="text">
-          {{message.text}}
-          </span>
+          <div class="text-wrapper">
+            <div class="text">{{message.text}}</div>
+            <span class="arrow"></span>
+          </div>
         </div>
         <div class="message" v-else>
           
@@ -36,7 +37,6 @@ export default {
       if (newValue.text !== '') {
         this.messageList.push(newValue);
       }
-      
     }
   }
 }
@@ -52,11 +52,21 @@ export default {
       .message
         display flex
         flex-direction row-reverse
-        .text
-          background #98e165
-          margin-right .2rem
+        align-items flex-start
+        .text-wrapper
+          max-width 60%
+          .text
+            background #98e165
+            margin-right .2rem
+            font-size .6rem
+            padding .2rem
+            overflow-wrap break-word
+            border-radius .1rem
+          .arrow
+            color red
         .avatar
           width 1rem
           height 1rem
-          border-radius 50%          
+          margin-right .2rem
+                  
 </style>
