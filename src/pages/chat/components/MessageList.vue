@@ -55,15 +55,21 @@ export default {
         align-items flex-start
         .text-wrapper
           max-width 60%
+          margin-right .2rem
+          position relative
           .text
             background #98e165
-            margin-right .2rem
             font-size .6rem
             padding .2rem
             overflow-wrap break-word
             border-radius .1rem
           .arrow
-            color red
+            position absolute
+            top 13px
+            right -7px
+            border-left: .2rem solid #9bdf53;
+            border-top: .2rem solid #ffffff00;
+            border-bottom: .2rem solid #ffffff00;
         .avatar
           width 1rem
           height 1rem
