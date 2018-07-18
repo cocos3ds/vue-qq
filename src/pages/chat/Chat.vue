@@ -34,7 +34,8 @@ export default {
     }
   },
   mounted () {
-    this.socket = new io('http://localhost:3000')
+    var host = window.location.protocol+"//"+window.location.hostname+":3000"
+    this.socket = new io(host)
     var self = this
     this.socket.on('chat message',function (message) {
       message.type = 'otehr'
