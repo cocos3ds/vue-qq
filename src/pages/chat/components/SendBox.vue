@@ -28,12 +28,15 @@ export default {
       message: ''
     }
   },
+  props: {
+    userid:String
+  },
   methods: {
     handleSendMessage: function () {
       // var random = Math.floor(Math.random()*10);
       // var type = (random%2) == 0 ? 'other':'self'
       // console.log(random)
-      this.$emit('SendMessage',{type:'self',text:this.message});
+      this.$emit('SendMessage',{userid:this.userid,text:this.message});
       this.message = ''
     }
   }

@@ -4,19 +4,15 @@
       <li class="message-wrapper" 
       v-for="(message,index) of messageList" 
       :key="index">
-        <div class="message-me" v-if="message.type == 'self'">
-          <div class="avatar">
-            <img src="/img/avatar.jpg" class="avatar">
-          </div>
+        <div class="message-me" v-if="message.userid == userid">
+          <img src="/img/avatar.jpg" class="avatar">
           <div class="text-wrapper">
             <div class="text">{{message.text}}</div>
             <span class="arrow"></span>
           </div>
         </div>
         <div class="message-other" v-else>
-          <div class="avatar">
             <img src="/img/avatar.jpg" class="avatar">
-          </div>
           <div class="text-wrapper">
             <div class="text">{{message.text}}</div>
             <span class="arrow"></span>
@@ -36,7 +32,8 @@ export default {
     }
   },
   props:{
-    newMessage: Object
+    newMessage: Object,
+    userid: String
   },
   watch: {
     newMessage: function (newValue) {
@@ -85,7 +82,7 @@ export default {
         align-items flex-start
         .text-wrapper
           max-width 60%
-          margin-right .2rem
+          margin-left .2rem
           position relative
           .text
             background #98e165
@@ -103,6 +100,5 @@ export default {
         .avatar
           width 1rem
           height 1rem
-          margin-right .2rem
-                  
+          margin-left .2rem
 </style>
