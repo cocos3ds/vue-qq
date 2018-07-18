@@ -16,7 +16,6 @@ io.on('connection',function(socket) {
     // console.log(msg);
   });
 
-
 });
 
 http.listen(3000,function () {
